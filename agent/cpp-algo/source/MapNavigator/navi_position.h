@@ -21,7 +21,7 @@ struct NaviPosition
     double score = 0.0;
     // 角色站在哪张可走面。实机定位给不出这个信息，只有预览端选了层才有值，不传就按区的主层走。
     std::optional<double> floor_y;
-    // angle 是本次导航选定的朝向；camera_angle 仅用于起步前将镜头对齐到该朝向。
+    // angle 是本次取位选定的朝向；camera_angle 用于起步对齐，以及停车后的精确接近。
     std::optional<double> camera_angle;
     // 本帧位置与选定朝向均可用。
     bool valid = false;
